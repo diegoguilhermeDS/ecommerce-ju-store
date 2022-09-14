@@ -258,6 +258,7 @@ function renderizaCategoria(event) {
 
 
 function procurarProduto(event) {
+    event.preventDefault()
     let produto = event.path[1].children[0].value
     produto = produto.toUpperCase()
     
