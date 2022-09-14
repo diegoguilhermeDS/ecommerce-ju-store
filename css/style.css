@@ -164,6 +164,23 @@ body {
     border-radius: 2px;
 }
 
+/* Estilizando se a lista estiver vazia */
+.secao_produto .lista_produtos_vazia {
+    display: flex;
+    justify-content: center;
+    
+}
+.secao_produto .lista_produtos_vazia li {
+    width: 300px;
+    height: 200px;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    border-radius: 4px;
+}
+
 /* Estilizando o aside */
 .bar_lateral {
     display: flex;

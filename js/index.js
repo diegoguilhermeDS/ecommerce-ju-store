@@ -6,7 +6,7 @@ let divCar = document.querySelector('.div-carrinho')
 
 // função para criar os produtos da vitrine
 function criandoProduto(list) {
-    let referenciaLista = document.querySelector('.lista_produtos')
+    let referenciaLista = document.querySelector('#lista_produtos')
     referenciaLista.innerHTML = ''
 
     for (let i = 0; i < list.length; i++) {
@@ -32,10 +32,27 @@ function criandoProduto(list) {
         </div>
         `
         referenciaLista.appendChild(tagLi)
+
+        referenciaLista.classList.remove('lista_produtos_vazia')
+        referenciaLista.classList.add('lista_produtos')
+    }
+
+    if (list.length === 0) {
+        let tagH3Vazio = document.createElement('li')
+
+        tagH3Vazio.innerHTML = `
+            <h3>Item não encontrado!</h3>
+        `
+
+        referenciaLista.appendChild(tagH3Vazio)
+
+        referenciaLista.classList.remove('lista_produtos')
+        referenciaLista.classList.add('lista_produtos_vazia')
     }
 }
 
 criandoProduto(data)
+
 
 
 // função para adicionar ao carrinho
@@ -196,7 +213,6 @@ function renderizaCategoria(event) {
 
     if (typeof(event.path) === 'undefined') {
         caminho = event
-        console.log('pegou')
     } else {
         caminho = event.path[0]
     }
@@ -247,30 +263,40 @@ function procurarProduto(event) {
     
     let produtoFiltrado = []
 
+    let tagUlNav = document.getElementsByTagName('ul')[0]
+    console.log(tagUlNav.children)
+
     for (let i = 0; i < data.length; i++) {
         let produtoAtualCar = data[i].nameItem.toUpperCase().split(' ')
 
         for (let p = 0; p < produtoAtualCar.length; p++) {
             if (produto === produtoAtualCar[p]) {
-                produtoFiltrado.push(data[i])
-            }
+                for (let l = 0; l < tagUlNav.children.length; l++) {
+                    let navAtual = tagUlNav.children[l].children[0].className
+
+                    if (navAtual === 'selecionado') {
+                        let idNav = tagUlNav.children[l].children[0].id
+
+                        if (idNav === 'Todos') {
+                            produtoFiltrado.push(data[i])
+                        } else if (idNav == data[i].tag) {
+                            produtoFiltrado.push(data[i])
+                        }
+                    }
+                }
+                
+            } 
         }
     }
 
-    if (produtoFiltrado.length > 0) {
-        criandoProduto(produtoFiltrado)
-    } 
+    criandoProduto(produtoFiltrado)
 
     if (produto === '') {
-        let tagUlNav = document.getElementsByTagName('ul')[0]
-
         for (let l = 0; l < tagUlNav.children.length; l++) {
             let navAtual = tagUlNav.children[l].children[0].className
 
             if (navAtual === 'selecionado') {
-                renderizaCategoria(tagUlNav.children[l].children[0])
-
-                
+                renderizaCategoria(tagUlNav.children[l].children[0]) 
             }
         }
     }
