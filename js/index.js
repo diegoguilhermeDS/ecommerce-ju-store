@@ -269,10 +269,17 @@ function procurarProduto(event) {
 
             if (navAtual === 'selecionado') {
                 renderizaCategoria(tagUlNav.children[l].children[0])
+
+                
             }
         }
     }
 
+    let buttonAdd = document.getElementsByClassName('addCart')
+
+    for (let b = 0; b < buttonAdd.length; b++) {
+        buttonAdd[b].addEventListener('click', addCarrinho)
+    }
 }
 
 let butaoPesquisa = document.querySelector('.butao_pesquisa')
