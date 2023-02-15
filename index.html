@@ -9,8 +9,6 @@
     <title>Jeniffer Uchoa store</title>
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/database.js" defer></script>
-    <script src="js/index.js"  defer></script>
 </head>
 <body>
     <header class="cabecalho_principal">
@@ -34,7 +32,7 @@
         </section>
         <aside class="bar_lateral">
             <form class="pesquisa">
-                <input type="text" placeholder="Digite aqui sua pesquisa">
+                <input type="text" placeholder="Digite aqui sua pesquisa" id="inputSearch">
                 <button class="butao_pesquisa">Pesquisar</button>
             </form>
             <div class="div-carrinho">
@@ -44,5 +42,7 @@
             </div>
         </aside>
     </main>
+
+    <script type="module" src="./js/index.js"></script>
 </body>
 </html>

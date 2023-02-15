@@ -10,6 +10,7 @@ const data = [
     value: 100,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
+    quant: 1
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const data = [
     value: 100,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 3,
@@ -30,6 +32,7 @@ const data = [
     value: 40,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 4,
@@ -40,6 +43,7 @@ const data = [
     value: 100,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
+    quant: 1
   },
   {
     id: 5,
@@ -50,6 +54,7 @@ const data = [
     value: 100,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
+    quant: 1
   },
   {
     id: 6,
@@ -60,6 +65,7 @@ const data = [
     value: 100,
     addCart: "Adicionar ao carrinho",
     tag: ["Camisetas"],
+    quant: 1
   },
   {
     id: 7,
@@ -70,6 +76,7 @@ const data = [
     value: 55,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 8,
@@ -80,6 +87,7 @@ const data = [
     value: 79,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 9,
@@ -90,6 +98,7 @@ const data = [
     value: 120,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ const data = [
     value: 150,
     addCart: "Adicionar ao carrinho",
     tag: ["Acessórios"],
+    quant: 1
   },
   {
     id: 11,
@@ -110,6 +120,7 @@ const data = [
     value: 80,
     addCart: "Adicionar ao carrinho",
     tag: ["Calçados"],
+    quant: 1
   },
   {
     id: 12,
@@ -120,6 +131,7 @@ const data = [
     value: 80,
     addCart: "Adicionar ao carrinho",
     tag: ["Calçados"],
+    quant: 1
   },
   {
     id: 13,
@@ -130,6 +142,7 @@ const data = [
     value: 120,
     addCart: "Adicionar ao carrinho",
     tag: ["Calçados"],
+    quant: 1
   },
   {
     id: 14,
@@ -140,5 +153,8 @@ const data = [
     value: 120,
     addCart: "Adicionar ao carrinho",
     tag: ["Calçados"],
+    quant: 1
   },
 ]; 
+
+export default data
